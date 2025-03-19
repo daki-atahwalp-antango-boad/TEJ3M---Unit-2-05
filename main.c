@@ -1,7 +1,7 @@
 /* 
  *This program turns a servo 180 to 0 degrees every second
  *
- *Created on Feb 2025
+ *Created on Mar 2025
  *By Daki A.B
 */ 
 
@@ -16,17 +16,17 @@ const int TURN_TIME = 1000;
 int servoAngle = 0;
 
 void setup() {
-  // assigning servo pins to arduino
-  servo.attach(7);
-  servo.write(servoAngle);
+    // assigning servo pins to arduino
+    servo.attach(7);
+    servo.write(servoAngle);
 }
 
 void loop() {
-  // turning servo 180 degrees, pause, turning to 0 degrees
-  servoAngle += 180;
-  servo.write(servoAngle);
-  delay(TURN_TIME);
-  servoAngle -= 180;
-  servo.write(servoAngle);
-  delay(TURN_TIME);
+    // turning servo 180 degrees, pause, turning to 0 degrees
+    servoAngle += 180;
+    servo.write(servoAngle);
+    delay(TURN_TIME);
+    servoAngle -= 180;
+    servo.write(servoAngle);
+    delay(TURN_TIME);
 }
